@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    
+    <title>My Euros</title>
+</head>
+
+
+<body>
+    <img src="./my-dolar.gif">
+    <h1>My Euro</h1>
+
+    <div>
+        <input id="buttonReal" type="number" placeholder="Valor em Reais">
+        <input id="buttonEuro" placeholder="Cotação atual do Euro"> 
+
+        <p id="dolares">€</p>
+
+        <button onclick="calcularDolar()">Converter</button>
+    </div>
+</body>
+
+<style>
+    body{
+        text-align: center;
+        background-color: #323232;
+    }
+    img{
+        width: 50%;
+        height: 50%;
+    }
+    p{
+       color: #cfff00;
+    }
+    h1{
+        color: #cfff00;
+        font-size: 50px;
+    }
+    input{
+        width: 160px;
+        height: 40px;
+    }
+    #buttonReal{
+        border: 3px solid #cfff00;
+    }
+    #buttonEuro{
+        border: 3px solid red;
+    }
+    p{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    button{
+        height: 60px;
+        width: 200px;
+        font-size: 20px;
+        cursor: pointer;
+        border: 3px solid #cfff00;
+        border-radius: 10px;
+        background-color: #323232;
+        color: white;
+    }
+    button:hover{
+        color: #323232;
+        background-color: #cfff00;
+    }
+</style>
+
+<script>
+    function calcularDolar(){
+        let real = document.getElementById("buttonReal").value
+        let euro = document.getElementById("buttonEuro").value
+        let resultado = real / euro 
+        dolares.innerHTML = '€ ' + resultado
+        alert('O resultado é €'+ resultado + ' Euros')
+    }
+   
+
+
+
+
+</script>
+
+</html>
